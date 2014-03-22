@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F53AAD48-AE5F-4EFA-BB64-E0EF98F83681}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GGWebLib</RootNamespace>
+    <AssemblyName>GGWebLib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppSettingReader.cs" />
+    <Compile Include="CheckTypeIsDataItem.cs" />
+    <Compile Include="DataItemDescription.cs" />
+    <Compile Include="DataItemFieldInfo.cs" />
+    <Compile Include="ExecptionHelper.cs" />
+    <Compile Include="GetValueFromCollection.cs" />
+    <Compile Include="GGBaseBLL.cs" />
+    <Compile Include="GGBLLHelper.cs" />
+    <Compile Include="GGDbContext.cs" />
+    <Compile Include="GGDbContextAfterExecute.cs" />
+    <Compile Include="GGDbContextBeforeExecute.cs" />
+    <Compile Include="GGDbContextEventArgs.cs" />
+    <Compile Include="GGDbContextExceptionEvent.cs" />
+    <Compile Include="GGDbContextGetDefaultConnectionString.cs" />
+    <Compile Include="GGDbContextOpenConnection.cs" />
+    <Compile Include="GGItemHelper.cs" />
+    <Compile Include="GGUrlHelper.cs" />
+    <Compile Include="GGWebFormHelper.cs" />
+    <Compile Include="InvalidDataItemTypeException.cs" />
+    <Compile Include="ItemFieldAttribute.cs" />
+    <Compile Include="LoadItemValuesFormRowFunc.cs" />
+    <Compile Include="LoadMemberFaildException.cs" />
+    <Compile Include="MyDataAdapter.cs" />
+    <Compile Include="MyMessageException.cs" />
+    <Compile Include="PagingInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpOutParamDescription.cs" />
+    <Compile Include="SpParameterCache.cs" />
+    <Compile Include="SR.cs" />
+    <Compile Include="StringHelper.cs" />
+    <Compile Include="StringIsBool.cs" />
+    <Compile Include="TypeList.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
