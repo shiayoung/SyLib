@@ -195,6 +195,29 @@ namespace Core.Common
                 return "(" + string.Join("|", exts) + ")";
             }
         }
+        
+        /// <summary>
+        /// 使用指定格式从字符串获取日期类型
+        /// </summary>
+        /// <param name="dateString">日期字符串</param>
+        /// <param name="format">要解析的指定格式数组</param>
+        /// <returns></returns>
+        public static DateTime? GetDateTimeFromString(string dateString, string[] format)
+        {
+            if (!string.IsNullOrEmpty(dateString))
+            {
+                DateTime dt;
+                if (DateTime.TryParseExact(dateString,
+                    format,
+                    System.Globalization.CultureInfo.InvariantCulture,
+                    System.Globalization.DateTimeStyles.None,
+                    out dt))
+                {
+                    return dt;
+                }
+            }
+            return null;
+        }
 
         private sealed class DecimalConverter : JsonConverter
         {
