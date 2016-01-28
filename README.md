@@ -3,4 +3,4 @@ SyLib
 
 C# programming common library
 
-Thanks to my former project leader Gao Guanghe, he shared the code for me.
+Thanks to former project leader Gao Guanghe, who shared the code for me.
